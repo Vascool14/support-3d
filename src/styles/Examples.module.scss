@@ -1,0 +1,395 @@
+@import "_base";
+.ExampleWrapperIFrame {
+    height: 100vh;
+    .ChartWrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        touch-action: none;
+        img {
+            display: block;
+        }
+    }
+}
+
+.ChartWrapper {
+    overflow: hidden;
+    position: relative;
+    touch-action: none;
+    aspect-ratio: 1.3333;
+    img {
+        display: block;
+    }
+}
+
+.FullHeightChartWrapper {
+    @extend .ChartWrapper;
+    flex: auto;
+}
+
+.ExampleWrapperCompicated {
+    display: grid;
+    grid-template-columns: repeat(50, 1fr);
+    margin: 0 auto;
+    .ExampleWrapperCompicatedMain {
+        grid-column: 1 / 33;
+    }
+    .ExampleWrapperCompicatedSub {
+        grid-column: 35 /-1;
+    }
+    @include xs {
+        max-width: 250px;
+    }
+}
+
+.ExampleWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .Example {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .ExampleDescription {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+.FormControl {
+    margin: $default-spacing;
+    margin-left: 0;
+    min-width: 142;
+}
+
+.AlignRight {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.Notification {
+    margin-bottom: $default-spacing * 2;
+}
+
+/////*****ExamplesRoot*****/////
+.ExamplesRoot {
+    @include md {
+        margin: 0;
+        padding: 0;
+    }
+    .SciChartLogo {
+        text-align: right;
+        margin-bottom: $default-spacing * 2;
+        @include sm {
+            display: none;
+        }
+    }
+    .Body {
+        display: flex;
+
+        @include sm {
+            display: block;
+        }
+    }
+    .ColMain {
+        flex-basis: 240px;
+        flex-shrink: 0;
+        flex-grow: 1;
+        overflow-x: auto;
+        // margin-bottom: $default-spacing * 3;
+    }
+
+    .ColDescription {
+        flex-basis: 360px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding-left: $default-spacing * 3;
+        @include sm {
+            padding-left: 0;
+        }
+        margin-bottom: $default-spacing * 3;
+    }
+    .ExampleRootDescription {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .ExampleRootDescriptionLink {
+            color: $color-link-text !important;
+            &:hover {
+                color: $color-link-text-hover !important;
+            }
+        }
+        @include md {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 30px 20px;
+        }
+        h5 {
+            font-size: 1.875rem;
+            font-weight: 600;
+            line-height: 40px;
+            @include md {
+                margin-bottom: 20px;
+            }
+        }
+        .ExampleDescriptionText {
+            font-size: 1rem;
+            color: $font-color;
+            line-height: 30px;
+
+            width: 75%;
+            @include md {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+        }
+    }
+    .Title {
+        width: 100%;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    .Subtitle {
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 30px;
+        a {
+            color: $color-link-text;
+        }
+        a:hover {
+            color: $color-link-text-hover;
+        }
+    }
+    .TextGreen {
+        color: $color-main-green;
+    }
+}
+/////*****VitalSignsMonitorDemo*****/////
+
+.ChartContainer {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    @include xs {
+        flex-direction: column;
+    }
+}
+.VitalSigns {
+    width: 100%;
+    max-width: 90vw;
+}
+.InfoBoxContainer {
+    flex-basis: 25%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 90vw;
+    //@include md {
+    //    flex-basis: 25%;
+    //}
+}
+
+.InfoBox {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-left: 1px solid #364ba0;
+    padding: 6px;
+    height: 25%;
+    width: 100%;
+    background-color: black;
+    border-bottom: 1px solid #364ba0;
+    //@include sm {
+    //    height: auto;
+    //}
+}
+.IbRow1 {
+    flex-grow: 1;
+    display: flex;
+}
+.IbRow1Col1 {
+    flex-grow: 1;
+    font-size: 32px;
+}
+.IbRow1Col2 {
+    text-align: right;
+    margin-top: 4px;
+    font-size: 12px;
+}
+.IbRow2 {
+    display: flex;
+    align-items: flex-end;
+}
+.IbRow2Col1 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 14px;
+    img {
+        width: 45px;
+    }
+}
+.IbRow2Col2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 44px;
+    line-height: 44px;
+}
+
+.ButtonsWrapper {
+    display: flex;
+    flex: none;
+    margin-top: 10px;
+    button {
+        color: $color-main-green;
+        border: 1px $color-main-green solid;
+        text-align: center;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+    .GitHubLink {
+        border: 1px $color-medium-blue solid;
+        border-radius: 4px;
+        background-color: $color-lightest-green;
+        color: $color-medium-blue;
+        text-decoration: none;
+        a {
+            color: $color-medium-blue;
+        }
+    }
+    .ButtonsText {
+        margin-left: 10px;
+        color: $color-main-green;
+        text-decoration: none;
+    }
+
+    @include xs {
+        flex-direction: column;
+        align-items: center;
+        align-items: stretch;
+        button {
+            &:not(:last-child) {
+                margin-right: 0px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.SelectWrapper {
+    display: flex;
+    margin-top: 10px;
+    @include sm {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @include xs {
+        align-items: stretch;
+    }
+}
+.InputSelectWrapper {
+    display: flex;
+    align-items: center;
+    color: $color-main-green;
+    border: 1px $color-main-green solid;
+    padding: 5px;
+    border-radius: 4px;
+
+    label {
+        margin-right: 5px;
+        margin: 0 auto;
+    }
+    select {
+        background-color: none !important;
+        outline: none;
+        border: none;
+        color: $color-main-green;
+        border-bottom: 1px $color-main-green solid;
+        font-size: 16px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent;
+        width: 100%;
+        text-align: center;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(92,184,92)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: -2px;
+
+        border-radius: 2px;
+        margin-right: 20px;
+    }
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+    @include sm {
+        &:not(:last-child) {
+            margin-right: 0px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.Animation {
+    transition: all 0.2s;
+
+    animation-name: up;
+    animation-delay: 0.9s;
+    animation-duration: 1.2s;
+}
+
+@keyframes up {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.Lidar {
+    min-height: 500;
+    @include md {
+        min-height: 300;
+        height: 70vh;
+    }
+    @include sm {
+        height: 60vw;
+    }
+}
+
+//Common
+.PurpleButton {
+    background: $gradient-btn-dark;
+    border-radius: 14px;
+    margin: 10px;
+    span {
+        font-weight: bold;
+        padding: 6px 15px;
+        color: white !important;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+}
+
+.PurpleButton:hover {
+    background-size: 200% 100%;
+    background-position: 0 100%;
+}
+
+

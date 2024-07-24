@@ -1,0 +1,40 @@
+{
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "@material-ui/core": "4.12.4",
+    "@material-ui/lab": "4.0.0-alpha.61",
+    "loader-utils": "3.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.1",
+    "sass": "^1.49.9",
+    "scichart": "^3.4.636",
+    "scichart-react": "^0.1.8",
+    "@mui/material": "5.16.1",
+    "@emotion/styled": "11.11.5",
+    "@emotion/react": "11.11.4",
+    "react-redux": "9.1.2",
+    "lodash": "4.17.21",
+    "@mui/icons-material": "5.16.1"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.13.8",
+    "@types/react": "^17.0.52",
+    "@types/react-dom": "18.0.9",
+    "typescript": "4.9.5"
+  },
+  "main": "src/index.tsx",
+  "name": "3d-bubble-chart",
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "version": "1.0.0"
+}
